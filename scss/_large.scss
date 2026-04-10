@@ -1,0 +1,106 @@
+// =============================================
+// LARGE — Dogtown Skool of Skateboarding
+// Desktop overrides (1024px+)
+// =============================================
+
+/* ---- CONSTRAIN WIDTH ---- */
+header,
+nav,
+main,
+footer {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Nav ul fills the full constrained nav container */
+nav ul {
+  width: 100%;
+}
+
+/* ---- HEADER ---- */
+header {
+  padding: 0.8rem $gutter;
+
+  .logo {
+    width: 90px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* ---- NAVIGATION — justify right [FLEX] ---- */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+
+  li {
+    flex: 0 0 auto;
+    width: auto;        /* reset 100% from small */
+    border-bottom: none;
+    text-align: left;
+
+    a {
+      padding: 0.9rem 1.4rem;
+      font-size: 1.05rem;
+    }
+  }
+}
+
+/* ---- FORM — two-column layout for text inputs ---- */
+form.myForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+
+  h3 {
+    grid-column: 1 / -1;
+  }
+
+  &.myForm > h1 {
+    grid-column: 1 / -1;
+  }
+
+  label:has(input[type="text"]),
+  label:has(input[type="tel"]),
+  label:has(input[type="email"]),
+  label:has(input[type="password"]),
+  label:has(input[type="date"]),
+  label:has(select) {
+    grid-column: auto;
+  }
+
+  label:has(input[type="radio"]) {
+    grid-column: auto;
+    display: inline-flex;
+  }
+
+  label:has(input[type="checkbox"]) {
+    grid-column: auto;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #submit {
+    grid-column: 1 / -1;
+    max-width: 320px;
+  }
+}
+
+/* ---- HIDE close link (thanks.html) ---- */
+#top a,
+#navLinks > a {
+  display: none;
+}

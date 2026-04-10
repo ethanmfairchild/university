@@ -1,0 +1,79 @@
+// =============================================
+// MEDIUM — Dogtown Skool of Skateboarding
+// Tablet overrides (768px – 1023px)
+// =============================================
+
+/* Cancel small's grid ordering — nav goes back below header */
+body {
+  display: block;
+}
+
+/* ---- HEADER ---- */
+header {
+  .logo {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Hide hamburger on medium+ screens */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ---- NAVIGATION — spread evenly horizontally ---- */
+#navWrapper {
+  border-top: none;
+  border-bottom: 1px solid $borderColor;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+
+  li {
+    flex: 1;
+    width: auto;        /* reset 100% from small */
+    border-bottom: none;
+    text-align: center;
+
+    a {
+      padding: 0.85rem 0.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      border-left: none;
+
+      &.active {
+        border-left: none;
+        border-bottom: 3px solid $pColor;
+        color: $pColor;
+      }
+    }
+  }
+}
+
+/* ---- FORM — wider inputs ---- */
+form.myForm {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    max-width: 380px;
+  }
+
+  #submit {
+    max-width: 380px;
+  }
+}
+
+/* ---- HIDE close link (thanks.html) ---- */
+#top a,
+#navLinks > a {
+  display: none;
+}

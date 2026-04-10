@@ -1,0 +1,67 @@
+// =============================================
+// NORMALIZE — Dogtown Skool of Skateboarding
+// =============================================
+
+/* Prevent font size adjustment after orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Natural box layout model for all elements */
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+figure, figcaption,
+blockquote, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul/ol */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove default button styling */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Anchor defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Consistent table styling */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

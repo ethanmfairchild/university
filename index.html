@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Apply | Dogtown Skool of Skateboarding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Fonts: Bebas Neue (headings) + Barlow (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="headerWrapper">
+    <header>
+      <img
+        src="images/logo1x.png"
+        srcset="
+          images/logo1x.png 1x,
+          images/logo2x.png 2x,
+          images/logo3x.png 3x
+        "
+        alt="Dogtown Skool of Skateboarding Logo"
+        class="logo"
+      >
+      <h1>Dogtown Skool of Skateboarding</h1>
+      <a href="#navWrapper" class="hamburger">&#9776;</a>
+    </header>
+  </div><!-- end headerWrapper -->
+
+  <div id="navWrapper">
+    <nav>
+      <ul>
+        <li><a href="#">Students</a></li>
+        <li><a class="active" href="#">Apply</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Coaches</a></li>
+        <li><a href="#">Tuition</a></li>
+      </ul>
+    </nav>
+  </div><!-- end navWrapper -->
+
+  <div id="mainWrapper">
+    <main id="main">
+      <h1>Apply</h1>
+
+      <form method="GET" action="thanks.html" class="myForm" autocomplete="on">
+
+        <h3>Contact Information</h3>
+
+        <label>First Name:
+          <input type="text" name="fname" autocomplete="given-name" required
+            title="Enter your first name.">
+        </label>
+
+        <label>Last Name:
+          <input type="text" name="lname" autocomplete="family-name" required
+            title="Enter your last name.">
+        </label>
+
+        <label>Cell Phone:
+          <input type="tel" name="phone" autocomplete="tel" required
+            title="Enter your cell phone number.">
+        </label>
+
+        <label>Email:
+          <input type="email" name="email" autocomplete="email" required
+            title="Enter a valid email address.">
+        </label>
+
+        <label>Address:
+          <input type="text" name="address" autocomplete="address-line1"
+            title="Enter your street address.">
+        </label>
+
+        <label>City:
+          <input type="text" name="city" autocomplete="address-level2"
+            title="Enter your city.">
+        </label>
+
+        <label>State:
+          <input type="text" name="state" autocomplete="address-level1"
+            title="Enter your state.">
+        </label>
+
+        <label>Zip:
+          <input type="text" name="zip" autocomplete="postal-code"
+            title="Enter your zip code.">
+        </label>
+
+        <h3>Communication Preferences</h3>
+
+        <label><input type="radio" name="contact-method" value="call"><span>Call</span></label>
+        <label><input type="radio" name="contact-method" value="text"><span>Text</span></label>
+        <label><input type="radio" name="contact-method" value="email"><span>Email</span></label>
+        <label><input type="radio" name="contact-method" value="mail"><span>Mail</span></label>
+
+        <h3>Previous Education</h3>
+
+        <label>
+          <select name="previous-school" required>
+            <option value="">Select Your Previous School</option>
+            <option value="high-school">High School</option>
+            <option value="community-college">Community College</option>
+            <option value="skate-academy">Skate Academy / Skate School</option>
+            <option value="technical-school">Technical / Trade School</option>
+            <option value="vocational-school">Vocational School</option>
+            <option value="four-year-college">4-Year University</option>
+            <option value="online-courses">Online Courses</option>
+            <option value="homeschool">Homeschool</option>
+            <option value="ged">GED Program</option>
+            <option value="self-taught">Self-Taught</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <h3>High School Graduation Date</h3>
+
+        <label>Graduation Date:
+          <input type="date" name="grad-date" required
+            title="Select your high school graduation date.">
+        </label>
+
+        <h3>Education Completed</h3>
+
+        <label><input type="checkbox" name="edu" value="hs-diploma"><span>High School Diploma</span></label>
+        <label><input type="checkbox" name="edu" value="ged"><span>GED</span></label>
+        <label><input type="checkbox" name="edu" value="some-college"><span>Some College (No Degree)</span></label>
+        <label><input type="checkbox" name="edu" value="associate"><span>Associate Degree</span></label>
+        <label><input type="checkbox" name="edu" value="bachelor"><span>Bachelor's Degree</span></label>
+        <label><input type="checkbox" name="edu" value="master"><span>Master's Degree</span></label>
+        <label><input type="checkbox" name="edu" value="skate-cert"><span>Skate Certification</span></label>
+        <label><input type="checkbox" name="edu" value="tech-cert"><span>Technical Certificate</span></label>
+        <label><input type="checkbox" name="edu" value="vocational"><span>Vocational Training</span></label>
+        <label><input type="checkbox" name="edu" value="other"><span>Other</span></label>
+
+        <h3>Account Information</h3>
+
+        <label>Username (5&ndash;10 letters):
+          <input type="text" name="username" required pattern="[A-Za-z]{5,10}"
+            title="Username must be 5 to 10 letters (uppercase or lowercase only).">
+        </label>
+
+        <label>Password (6 or more characters):
+          <input type="password" name="password" required minlength="6"
+            title="Password must be at least 6 characters long.">
+        </label>
+
+        <input id="submit" type="submit" value="Start Shredding">
+
+      </form>
+    </main>
+  </div><!-- end mainWrapper -->
+
+  <div id="footerWrapper">
+    <footer>
+      <p class="legal">&copy; 2026 &bull; Ethan Fairchild</p>
+    </footer>
+  </div><!-- end footerWrapper -->
+
+</body>
+
+</html>

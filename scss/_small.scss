@@ -1,0 +1,331 @@
+// =============================================
+// SMALL — Dogtown Skool of Skateboarding
+// Base/mobile-first styles (< 768px)
+// =============================================
+
+/* ---- BODY ---- */
+body {
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+  background-color: $bgColor;
+  color: $textColor;
+  display: block;
+}
+
+/* ---- HEADER ---- */
+#headerWrapper {
+  background-color: $headerBg;
+  border-bottom: 1px solid $borderColor;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem $gutter;
+  gap: 1rem;
+
+  .logo {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-family: $headingFont;
+    color: $pColor;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    flex-grow: 1;
+    line-height: 1.2;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ---- NAVIGATION (SMALL — above main) ---- */
+#navWrapper {
+  background-color: $navBg;
+  border-bottom: 1px solid $borderColor;
+}
+
+nav ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid $borderColor;
+
+    &:last-child { border-bottom: none; }
+
+    a {
+      display: block;
+      padding: 1rem $gutter;
+      font-family: $headingFont;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      color: $sColor;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: $cardBg;
+        color: $pColor;
+      }
+
+      &.active {
+        color: $pColor;
+        border-left: 3px solid $pColor;
+        font-weight: $boldWeight;
+      }
+    }
+  }
+}
+
+/* ---- MAIN ---- */
+#mainWrapper {
+  background-color: $bgColor;
+}
+
+main {
+  padding: 0 0 2rem 0;
+  scroll-margin-top: 20px;
+
+  h1 {
+    font-family: $headingFont;
+    font-size: 2.2rem;
+    letter-spacing: 0.06em;
+    color: $pColor;
+    padding: 1.2rem $gutter 0.5rem;
+    font-weight: $normalWeight;
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    padding: 0.5rem $gutter;
+    line-height: $leading;
+    color: $sColor;
+  }
+}
+
+/* ---- FORM ---- */
+form.myForm {
+  margin: 1rem $gutter;
+
+  h3 {
+    font-family: $headingFont;
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    color: $pColor;
+    margin: 1.8rem 0 0.4rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  label {
+    display: block;
+    font-size: 0.95rem;
+    color: $sColor;
+    padding-top: 0.5rem;
+    line-height: $leading;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    display: block;
+    margin: 0.3rem 0 0.8rem 0;
+    background-color: $inputBg;
+    color: $inputText;
+    border: 1px solid $inputBorder;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 320px;
+    padding: 0.55rem 0.9rem;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $pColor;
+    }
+
+    &::placeholder {
+      color: #666;
+    }
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23aaaaaa" d="M1 1l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+
+    option {
+      background-color: $cardBg;
+      color: $inputText;
+    }
+  }
+
+  /* Radio & checkbox rows */
+  label:has(input[type="radio"]),
+  label:has(input[type="checkbox"]) {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: 0.6rem;
+    padding-top: 0;
+    cursor: pointer;
+
+    input {
+      accent-color: $pColor;
+      width: 1.1rem;
+      height: 1.1rem;
+      cursor: pointer;
+    }
+
+    span {
+      margin-left: 0.4rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Checkbox labels stack full width */
+  label:has(input[type="checkbox"]) {
+    display: flex;
+    margin-right: 0;
+  }
+
+  /* Submit button */
+  #submit {
+    display: block;
+    border: 2px solid $pColor;
+    background-color: $pColor;
+    color: $bgColor;
+    border-radius: 4px;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 320px;
+    font-family: $headingFont;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+
+    &:hover {
+      background-color: $bgColor;
+      color: $pColor;
+    }
+  }
+}
+
+/* ---- FOOTER ---- */
+#footerWrapper {
+  background-color: $footerBg;
+  border-top: 1px solid $borderColor;
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 1rem $gutter;
+  text-align: center;
+  color: $mutedText;
+  line-height: $leading;
+}
+
+/* =============================================
+   FORM VALIDATION VISUAL FEEDBACK
+   ============================================= */
+
+input[required]:valid,
+select[required]:valid {
+  border: 1.5px solid #ffffff;
+}
+
+input[required]:invalid:not(:placeholder-shown),
+select[required]:invalid {
+  border: 1.5px solid #888888;
+}
+
+input[required]:valid {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ffffff" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 36px;
+}
+
+input[type="date"]:valid {
+  background-position: right 40px center;
+  padding-right: 70px;
+}
+
+select[required]:valid {
+  background-image:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ffffff" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23aaaaaa" d="M1 1l5 5 5-5"/></svg>');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 34px center, right 12px center;
+  background-size: 18px, auto;
+  padding-right: 3rem;
+}
+
+/* ---- THANK YOU PAGE ---- */
+.thank-you-message {
+  padding: 2rem $gutter;
+
+  h1 {
+    font-family: $headingFont;
+    font-size: 2.4rem;
+    letter-spacing: 0.06em;
+    color: $pColor;
+    padding: 0;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    padding: 0;
+    margin-bottom: 1rem;
+    color: $sColor;
+    line-height: $leading;
+  }
+
+  .back-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: 2px solid $pColor;
+    color: $pColor;
+    font-family: $headingFont;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: background-color 0.25s, color 0.25s;
+
+    &:hover {
+      background-color: $pColor;
+      color: $bgColor;
+    }
+  }
+}
