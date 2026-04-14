@@ -10,8 +10,15 @@ body {
   min-width: 320px;
   background-color: $bgColor;
   color: $textColor;
-  display: block;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
 }
+
+/* ---- SMALL LAYOUT — nav anchored at bottom ---- */
+#headerWrapper  { order: 1; }
+#mainWrapper    { order: 2; }
+#footerWrapper  { order: 3; }
+#navWrapper     { order: 4; }
 
 /* ---- HEADER ---- */
 #headerWrapper {
@@ -42,14 +49,19 @@ header {
   }
 
   .hamburger {
-    display: none;
+    font-size: 1.8rem;
+    color: $pColor;
+    text-decoration: none;
+    display: block;
+    line-height: 1;
+    padding: 0.25rem;
   }
 }
 
-/* ---- NAVIGATION (SMALL — above main) ---- */
+/* ---- NAVIGATION (SMALL — bottom of page) ---- */
 #navWrapper {
   background-color: $navBg;
-  border-bottom: 1px solid $borderColor;
+  border-top: 1px solid $borderColor;
 }
 
 nav ul {

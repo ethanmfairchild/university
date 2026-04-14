@@ -73,7 +73,25 @@ body {
   min-width: 320px;
   background-color: #0d0d0d;
   color: #f0f0f0;
-  display: block;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+/* ---- SMALL LAYOUT — nav anchored at bottom ---- */
+#headerWrapper {
+  order: 1;
+}
+
+#mainWrapper {
+  order: 2;
+}
+
+#footerWrapper {
+  order: 3;
+}
+
+#navWrapper {
+  order: 4;
 }
 
 /* ---- HEADER ---- */
@@ -103,13 +121,18 @@ header h1 {
   line-height: 1.2;
 }
 header .hamburger {
-  display: none;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  line-height: 1;
+  padding: 0.25rem;
 }
 
-/* ---- NAVIGATION (SMALL — above main) ---- */
+/* ---- NAVIGATION (SMALL — bottom of page) ---- */
 #navWrapper {
   background-color: #0a0a0a;
-  border-bottom: 1px solid #2e2e2e;
+  border-top: 1px solid #2e2e2e;
 }
 
 nav ul {
